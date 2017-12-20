@@ -12,8 +12,13 @@ gcc -c -Wall -D_FILE_OFFSET_BITS=64 -I/usr/local/include/fuse3  hello.c
 gcc -o hello hello.o -D_FILE_OFFSET_BITS=64 -I/usr/local/include/fuse3 -L/usr/local/lib/i386-linux-gnu -lfuse3 -lpthread 
 
 run:
+
 mkdir testdir
+
 ##mount:
+
 ./hello testdir
+
 ##umount:
+
 fusermount -u -z testdir
